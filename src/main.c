@@ -29,9 +29,19 @@ int main ()
 			class1[i] = 150 + rand() % 51; // Рост от 150 до 200 см
 			class2[i] = 150 + rand() % 51;
 	}
+	
 	int third_heights_class1 = find_third_heights(class1);
 	int third_heights_class2 = find_third_heights(class2);
 	printf("Третий по высоте в классе 1: %d см\n", third_heights_class1);
 	printf("Третий по высоте в классе 2: %d см\n", third_heights_class2);
 	
+	if (third_heights_class1 > third_heights_class2) {
+		printf("В классе 1 третий по высоте ученик выше.\n");
+	} else if (third_heights_class1 < third_heights_class2) {
+		printf("В классе 2 третий по высоте ученик выше.\n");
+	} else {
+		printf("Третий по высоте ученик одинакового роста в обоих классах.\n");
+	}
+
+	return 0;
 }
