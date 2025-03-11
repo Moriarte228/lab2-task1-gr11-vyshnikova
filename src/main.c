@@ -19,8 +19,15 @@ int find_third_heights(int height[]) {
 	return height[2];
 }
 
-void main (void)
+int main ()
 {
-	printf ("Hello World\n");
-	printf ("Goodbye World\n");
+	int class1[CLASS_SIZE], class2[CLASS_SIZE];
+	srand(time(0));
+
+	// Генерация случайных значений роста
+	for (int i = 0; i < CLASS_SIZE; i++) {
+			class1[i] = 150 + rand() % 51; // Рост от 150 до 200 см
+			class2[i] = 150 + rand() % 51;
+	}
+
 }
